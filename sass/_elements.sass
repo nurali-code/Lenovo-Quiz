@@ -1,0 +1,189 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #366EFF
+$second: #E42828
+
+body
+    min-height: 100vh
+    color: #0E0E0E
+    font-size: 14px
+    background-color: #F4F4F4
+    font-family: 'Montserrat', sans-serif
+    display: flex
+    flex-direction: column
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+p
+    font-size: 18px
+    line-height: 130%
+
+img
+    max-width: 100%
+
+a,
+button
+    color: #000
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+mark
+    background: transparent
+    color: $second
+
+.container
+    max-width: 1448px
+    margin: 0 auto
+    width: 100%
+    padding: 0 34px
+
+.btn
+    display: inline-block
+    text-transform: uppercase
+    font-size: 16px
+    font-style: normal
+    font-weight: 700
+    line-height: 150%
+    letter-spacing: 0.16px
+    padding: 13px 17px 11px
+    text-align: center
+    background-color: $prime
+    color: white
+    &:hover
+        opacity: 1
+        background-color: $second
+
+section
+    padding: 60px 0
+
+h2
+    font-size: 34px
+    font-style: normal
+    font-weight: 600
+    line-height: 114%
+    letter-spacing: -0.646px
+    margin: 0 0 55px
+
+hr
+    background-color: #DCDCDC
+    height: 1px
+    margin: 0px 0 40px
+
+input, select, textarea
+    width: 100%
+    border: 1px solid #DCDCDC
+    background-color: #FFF
+    height: 42px
+    padding: 0 14px
+    font-size: 15px
+    font-style: normal
+    font-weight: 400
+    line-height: 24px
+    margin: 0 0 15px
+    &::placeholder
+        color: #747474
+
+    &[disabled]
+        opacity: .5
+
+.inp
+    &-rad
+        margin-bottom: 6px
+        position: relative
+        z-index: 1
+        &::before
+            content: 'a.'
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: 24px
+            color: #878787
+            pointer-events: none
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 15px
+            z-index: 111
+
+        &:nth-child(2)::before
+            content: 'b.'
+        &:nth-child(3)::before
+            content: 'c.'
+        &:nth-child(4)::before
+            content: 'd.'
+        &:nth-child(5)::before
+            content: 'e.'
+        &:nth-child(6)::before
+            content: 'f.'
+
+        label
+            padding: 10px 20px 10px 47px
+            display: flex
+            align-items: center
+            border-radius: 2px
+            border: 1px solid #DCDCDC
+            min-height: 55px
+            position: relative
+            z-index: 1
+
+            font-size: 18px
+            font-weight: 500
+            line-height: 24px
+
+        input
+            width: 55px
+            height: 55px
+            position: absolute
+            left: 0
+            top: 0
+            opacity: 0
+            z-index: 1
+            visibility: hidden
+            &:checked ~ label
+                background-color: #fff
+
+        &:hover
+            label
+                background-color: #fff
+
+@media screen and ( max-width: 1500px )
+    .container
+        max-width: 1148px
+
+    section
+        padding: 50px 0
+
+@media screen and ( min-width: 700px )
+    .wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+@media screen and ( max-width: 700px )
+    h2
+        font-size: 22px
+        margin-bottom: 40px
+    .container
+        padding: 0 22px
+
+    .btn
+        font-size: 12px
+
+    input, select, textarea
+        margin-bottom: 5px
+        height: 44px

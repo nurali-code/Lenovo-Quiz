@@ -1,0 +1,476 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+@import 'footer'
+
+.hero
+    color: white
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    padding: 200px 0 50px
+    position: relative
+    z-index: 1
+    .logo
+        position: absolute
+        top: 50%
+        right: 0
+        display: block
+        transform: translateY(-50%)
+
+    h1
+        max-width: 650px
+        font-size: 34px
+        font-style: normal
+        font-weight: 800
+        line-height: 120%
+        margin: 0 0 27px
+
+    &__text
+        max-width: 600px
+        font-size: 16px
+        font-style: normal
+        font-weight: 500
+        line-height: 150%
+        letter-spacing: -0.176px
+        margin: 0 0 50px
+
+    .btn
+        margin: 0 0 100px
+
+    &-intel
+        color: white
+        img
+            margin-right: 20px
+
+    @media screen and ( min-width: 700px )
+        display: flex
+        align-items: center
+        justify-content: center
+        min-height: 100vh
+        min-height: 100lvh
+
+.information
+    padding: 60px 0
+    p
+        padding: 50px 40px
+        font-size: 17px
+        color: white
+        font-weight: 500
+        line-height: 150%
+        letter-spacing: -0.198px
+    @media screen and ( min-width: 700px )
+        p
+            background: url('../img/pattern_4.png'), linear-gradient(90deg, #11184F 17.3%, #4F123B 74.03%)
+            background-repeat: no-repeat
+            background-position: center right
+            background-size: contain
+
+.dropdown
+    border-top: 1px solid #DCDCDC
+    &-content
+        display: none
+        font-size: 22px
+        font-style: normal
+        font-weight: 600
+        line-height: 150%
+        letter-spacing: -0.242px
+        position: relative
+        padding: 0 0 0 50px
+        margin-bottom: 47px
+        &::before
+            content: ''
+            display: block
+            width: 34px
+            height: 1px
+            background-color: #DCDCDC
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+        &.active
+            display: block
+
+    &-btn
+        padding: 30px 60px 30px 0
+        width: 100%
+        position: relative
+        text-align: left
+        cursor: pointer
+        font-size: 26px
+        font-weight: 700
+        line-height: 150%
+
+        &:active
+            transform: none
+
+        &::after
+            content: '+'
+            display: inline-block
+            position: absolute
+            top: 50%
+            font-weight: normal
+            right: 30px
+            transform: translateY(-50%)
+            font-size: 35px
+
+        &.active
+            color: $prime
+            &::after
+                font-size: 25px
+                content: '─'
+
+    &-descr
+        padding-top: 46px
+        border-top: 1px solid #DCDCDC
+        font-size: 16px
+        font-style: normal
+        font-weight: 500
+        line-height: 150%
+        letter-spacing: -0.176px
+        a
+            color: #000
+            &:hover
+                text-decoration: underline
+
+    @media screen and ( max-width: 1480px )
+        &-btn
+            font-size: 22px
+
+        &-content
+            font-size: 18px
+            line-height: 28px
+
+    @media screen and ( max-width: 700px )
+        padding-bottom: 10px
+        &-btn
+            font-size: 13px
+            padding: 30px 50px 20px 15px
+            &::after
+                right: 10px
+
+        &-content
+            font-size: 12px
+            line-height: 150%
+            margin-bottom: 20px
+            padding: 0 10px 0 40px
+            &::before
+                width: 15px
+                left: 15px
+
+        &-descr
+            font-size: 10px
+            max-width: 90%
+            padding: 25px 10px 0
+            a
+                max-width: 60%
+                display: block
+                margin-top: 5px
+
+.quiz
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 70vh
+    min-height: 70lvh
+    padding: 100px 0
+    max-width: 1448px
+    margin: auto
+    position: relative
+    z-index: 11
+    &-tab
+        width: 100%
+        transition: all ease .3s
+        display: none
+        opacity: 0
+        &.active
+            display: block
+            animation: tabShow .3s ease forwards
+
+    &.active
+        @media screen and ( min-width: 700px )
+            &::before
+                content: ''
+                display: block
+                width: 50%
+                height: calc( 80% - 200px )
+                max-height: 510px
+                position: absolute
+                top: calc( 50% - 150px )
+                transform: translateY(-50%)
+                right: 0px
+                z-index: -1
+                background-image: url('../img/quiz_img.jpg')
+                background-repeat: no-repeat
+                background-position: top right
+                background-size: contain
+
+    &-form
+        padding: 55px 54px
+        width: calc( 100% - 10px )
+        max-width: 622px
+        border: 1px solid #C7C8DA
+        background: #FFF
+        position: relative
+        z-index: 1
+        text-align: left
+
+    &__heading
+        font-size: 23px
+        font-weight: 500
+        line-height: 122.727%
+        margin: 0 0 25px
+
+    &__logo
+        position: absolute
+
+    form
+        .btn
+            margin-top: 7px
+
+    @media screen and ( min-width: 701px )
+        &__logo
+            top: 23px
+            max-height: 77px
+            left: 100%
+
+        form
+            padding: 40px 0 0
+            border-top: 1px solid #C7C8DA
+            .wrap
+                input, select
+                    width: calc( 50% - 7.5px )
+
+    @media screen and ( max-width: 1500px )
+        max-width: 1100px
+
+    @media screen and ( max-width: 700px )
+        &-form
+            padding: 40px 15px
+
+        &__heading
+            font-size: 22px
+            margin-bottom: 20px
+
+        form
+            padding: 20px 0 0
+
+        &__logo
+            max-width: 55px
+            bottom: 100%
+            left: 15px
+
+    &-info
+        position: relative
+        z-index: 1
+        width: 100%
+        margin: 150px auto 0
+        background-color: #fff
+        padding: 22px 60px 22px 160px
+        &::before
+            content: ''
+            display: block
+            width: 82px
+            height: 138px
+            position: absolute
+            left: 40px
+            bottom: 22px
+            background-image: url('../img/lamp.png')
+            background-repeat: no-repeat
+            background-position: center center
+
+        p
+            margin-bottom: 9px
+            font-size: 14.5px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%
+
+        a
+            text-decoration: underline
+
+    &__caption
+        display: block
+        color: #9C9C9C
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        letter-spacing: -0.154px
+        margin: 0 0 26px
+
+    &-content
+        max-width: 48%
+        .btn
+            margin-top: 25px
+
+    &-resoult
+        text-align: center
+        &__img 
+            display: block
+            width: 95%
+            max-width: 853px
+            margin: 0 auto 70px 
+        &__heading
+            font-size: 23px
+            font-style: normal
+            font-weight: 600
+            line-height: 36px
+            margin: 0 
+
+        &__text
+            font-size: 20px
+            font-style: normal
+            font-weight: 500
+            line-height: 36px
+            margin: 0 0 20px
+
+    &-range
+        position: relative
+        z-index: 1
+        width: 470px
+        margin-bottom: 10px
+        margin: 0 auto 80px
+        &__bg
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+        &__bg,
+        &__item
+            display: block
+            height: 47px
+            width: 100%
+            border-radius: 5px
+            background-image: url('../img/star.svg')
+            background-repeat: repeat-x
+            background-size: contain
+            background-color: #F0F0F0
+        &__item
+            position: relative
+            z-index: 1
+            width: 80%
+            border-radius: 5px 0px 0px 5px
+            background-color: rgba(255, 205, 41, 0.70)
+            background-image: url('../img/star-active.svg')
+
+
+        i
+            width: 47px
+            display: inline-block
+            text-align: center
+            font-size: 12px
+            font-style: normal
+            font-weight: 500
+            line-height: 36px
+
+@keyframes tabShow
+    0%
+        transform: translateX(100px)
+        opacity: 0
+
+    100%
+        transform: translateX(0px)
+        opacity: 1
+
+@media screen and ( max-width: 1500px )
+    .hero
+        padding: 120px 0 50px
+        .logo
+            img
+                display: block
+                max-height: 250px
+        h1
+            max-width: 500px
+            font-size: 26px
+            margin-bottom: 16px
+
+        &__text
+            max-width: 400px
+            font-size: 15px
+            margin-bottom: 40px
+
+        .btn
+            margin-bottom: 80px
+
+        &-intel img
+            max-width: 200px
+            margin-right: 12px
+
+    .information
+        padding: 50px 0
+        p
+            padding: 40px 30px
+            font-size: 14px
+
+@media screen and ( max-width: 900px )
+    .hero::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -111
+        background: radial-gradient(52.31% 40.32% at 93.44% 52.26%, rgba(0, 0, 0, 0.00) 22.06%, rgba(0, 0, 0, 0.48) 72.57%)
+
+@media screen and ( max-width: 700px )
+    .hero
+        padding: 0 0 27px
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -111
+            background: radial-gradient(40.67% 31.4% at 93.44% 52.26%, rgba(0, 0, 0, 0.00) 22.06%, rgba(0, 0, 0, 0.48) 72.57%)
+
+        .logo
+            position: static
+            max-width: 102px
+            margin-left: 22px
+            transform: none
+            margin-bottom: 40px
+
+        h1
+            font-size: 22px
+            font-weight: 700
+            margin-bottom: 20px
+            span
+                font-weight: 500
+
+        &__text
+            max-width: 84%
+            font-size: 12px
+            font-style: normal
+            font-weight: 500
+            margin-bottom: 20px
+
+        .btn
+            margin-bottom: 43px
+
+        &-intel
+            font-size: 8px
+            img
+                max-width: 97px
+                margin-right: 2px
+
+    .information
+        padding: 50px 5px
+        p
+            font-size: 12px
+            padding: 17px 15px 18px
+            background: linear-gradient(90deg, #11184F 17.3%, #4F123B 74.03%)
+
+    .faq
+        padding: 15px 5px
+        h2
+            padding: 0 15px
+
+        .container
+            padding: 0
