@@ -168,11 +168,31 @@ input, select, textarea
     section
         padding: 50px 0
 
+    .inp
+        &-rad
+            label
+                font-size: 16px
+                min-height: 50px
+
 @media screen and ( min-width: 700px )
     .wrap
         display: flex
         align-items: center
         justify-content: space-between
+
+@media screen and ( max-width: 900px )
+    .inp
+        &-rad
+            &::before
+                left: 12px
+                font-size: 10px
+
+            label
+                padding: 10px 20px 10px 32px
+
+    input, select, textarea
+        font-size: 14px
+        height: 44px
 
 @media screen and ( max-width: 700px )
     h2
