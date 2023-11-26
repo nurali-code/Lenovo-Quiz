@@ -168,9 +168,13 @@
                 display: block
                 margin-top: 5px
 
-.quiz
+.quiz,
+.quiz-tab.active,
+.quiz-info
     display: flex
     align-items: center
+    flex-wrap: wrap
+.quiz
     justify-content: center
     min-height: 70vh
     min-height: 70lvh
@@ -185,32 +189,15 @@
         transition: all ease .3s
         display: none
         opacity: 0
+        justify-content: space-between
         &.active
-            display: block
+            // display: flex
             animation: tabShow .3s ease forwards
-
-    &.active
-        @media screen and ( min-width: 700px )
-            &::before
-                content: ''
-                display: block
-                width: 50%
-                height: calc( 80% - 200px )
-                max-height: 510px
-                position: absolute
-                top: calc( 50% - 150px )
-                transform: translateY(-50%)
-                right: 0px
-                z-index: -1
-                background-image: url('../img/quiz_img.jpg')
-                background-repeat: no-repeat
-                background-position: top right
-                background-size: contain
 
     &-form
         padding: 55px 54px
         width: calc( 100% - 10px )
-        margin: 0 auto 
+        margin: 0 auto
         max-width: 622px
         border: 1px solid #C7C8DA
         background: #FFF
@@ -218,7 +205,24 @@
         z-index: 1
         text-align: left
 
+    &-img
+        width: 500px
+        max-width: 38%
+        aspect-ratio: 1/1
+        border-radius: 50%
+        overflow: hidden
+        margin-right: 20px
+        img
+            aspect-ratio: 1/1
+            border-radius: 50%
+            width: 100%
+            max-width: 100%
+            display: block
+            margin: 0 auto
+            transform: scale(1.015)
+
     &__heading
+        width: 100%
         font-size: 23px
         font-weight: 500
         line-height: 122.727%
@@ -246,7 +250,7 @@
 
     @media screen and ( max-width: 1500px )
         max-width: 1160px
-        padding: 0 30px
+        padding: 30px
 
     @media screen and ( max-width: 700px )
         &-form
@@ -265,10 +269,11 @@
             left: 15px
 
     &-info
+        min-height: 130px
         position: relative
         z-index: 1
         width: 100%
-        margin: 150px auto 0
+        margin: 50px auto 0
         background-color: #fff
         padding: 22px 40px 22px 160px
         &::before
@@ -284,6 +289,7 @@
             background-position: center center
 
         p
+            width: 100%
             margin-bottom: 9px
             font-size: 14px
             font-style: normal
@@ -304,18 +310,21 @@
         margin: 0 0 26px
 
     &-content
-        width: 48%
+        width: 54%
+        margin: auto 0
         .btn
             margin-top: 25px
 
     &-resoult
         text-align: center
+        max-width: 800px
         &__img
             display: block
             width: 95%
             max-width: 853px
             margin: 0 auto 70px
         &__heading
+            width: 100%
             font-size: 23px
             font-style: normal
             font-weight: 600
@@ -323,6 +332,7 @@
             margin: 0
 
         &__text
+            width: 100%
             font-size: 20px
             font-style: normal
             font-weight: 500
@@ -434,6 +444,9 @@
     .quiz
         width: 100%
         padding: 40px 0
+        &-img
+            display: none
+
         &-content
             width: 100%
             padding: 0 20px
@@ -479,6 +492,8 @@
                 padding: 0 20px
                 font-size: 16px
                 line-height: 150%
+                max-width: 70%
+                margin: 0 auto 15px
 
         &-range
             width: 281px

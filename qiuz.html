@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#E42828">
     <link rel="icon" type="image/png" href="./favicon.png">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=1234">
 </head>
 
 <body>
@@ -20,14 +20,14 @@
                 <img src="img/logo_Lenovo.png" class="quiz__logo" alt="logo_Lenovo">
             </picture>
             <h2 class="quiz__heading">Участвуй в викторине, <mark>получи подарок!</mark></h2>
-            <form action="#">
+            <form id="first_form">
                 <div class="wrap">
-                    <input type="text" required name="u-name" placeholder="Имя:">
-                    <input type="text" required name="u-surname" placeholder="Фамилия:">
+                    <input type="text" required name="u-name" data-target-class="u_name" placeholder="Имя:">
+                    <input type="text" required name="u-surname" data-target-class="u_surname" placeholder="Фамилия:">
                 </div>
                 <input type="email" required name="u-email" placeholder="Рабочая почта:">
-                <input type="email" required name="u-email" placeholder="Название компании:">
-                <a href="#" type="submit" class="btn quiz-next">начать викторину</a>
+                <input type="text" required name="u-company" placeholder="Название компании:">
+                <button type="submit" class="btn">начать викторину</button>
             </form>
         </div>
 
@@ -55,6 +55,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img.jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -76,20 +78,22 @@
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
-                        <input type="radio" name="q2" id="ans4">
+                        <input value="1" type="radio" name="q2" id="ans4">
                         <label for="ans4">3</label>
                     </div>
                     <div class="inp-rad">
-                        <input type="radio" name="q2" id="ans5">
+                        <input value="2" type="radio" name="q2" id="ans5">
                         <label for="ans5">6</label>
                     </div>
                     <div class="inp-rad">
-                        <input type="radio" name="q2" id="ans6">
+                        <input value="3" type="radio" name="q2" id="ans6">
                         <label for="ans6">9 лет</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (1).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -112,20 +116,22 @@
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
-                        <input type="radio" name="q3" id="ans7">
+                        <input value="1" type="radio" name="q3" id="ans7">
                         <label for="ans7">1</label>
                     </div>
                     <div class="inp-rad">
-                        <input type="radio" name="q3" id="ans8">
+                        <input value="2" type="radio" name="q3" id="ans8">
                         <label for="ans8">2</label>
                     </div>
                     <div class="inp-rad">
-                        <input type="radio" name="q3" id="ans9">
+                        <input value="3" type="radio" name="q3" id="ans9">
                         <label for="ans9">4</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (2).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -167,6 +173,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (3).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -204,6 +212,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (4).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -240,6 +250,8 @@
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (5).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -285,6 +297,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (6).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -320,6 +334,8 @@
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (7).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -362,6 +378,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (8).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -400,6 +418,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (9).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -437,6 +457,8 @@
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (10).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -479,6 +501,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (11).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -515,6 +539,8 @@
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (12).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -553,6 +579,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (13).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -588,6 +616,8 @@
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (14).jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -626,6 +656,8 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (15).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -663,6 +695,90 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
+            <div class="quiz-img"><img src="img/quiz_img (16).jpg" alt="img"></div>
+
+            <div class="quiz-info">
+                <p>
+                    В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
+                    скептицизма пользователей и журналистов. В 2014 году Lenovo уже
+                    возглавляла мировой рейтинг производителей персональных компьютеров по объему продаж в денежном
+                    и количественном выражении согласно IDC,
+                    и выкупила у IBM бизнес по производству серверов на базе архитектуры x86.
+                </p>
+                <a href="#">Узнать ответ на вопрос</a>
+            </div>
+        </div>
+
+        <!-- Таб 18 -->
+        <div class="quiz-tab">
+            <div class="quiz-content">
+                <h3 class="quiz__heading">
+                    18. Как называется новый удобный инструмент для заказа услуг по инсталляции, внедрению и оптимизации
+                    инфраструктуры
+                    без предварительного согласования плана работ:
+                </h3>
+                <p class="quiz__caption">Выберите один ответ</p>
+                <fieldset>
+                    <div class="inp-rad">
+                        <input type="radio" name="q18" id="ans55">
+                        <label for="ans55">Парт номера Professional
+                            Services Tokens</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q18" id="ans56">
+                        <label for="ans56">Сервисный договор LSCS</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q18" id="ans57">
+                        <label for="ans57">Парт номера Premier</label>
+                    </div>
+                </fieldset>
+                <button class="btn quiz-next">следующий вопрос</button>
+            </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (17).jpg" alt="img"></div>
+
+            <div class="quiz-info">
+                <p>
+                    В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
+                    скептицизма пользователей и журналистов. В 2014 году Lenovo уже
+                    возглавляла мировой рейтинг производителей персональных компьютеров по объему продаж в денежном
+                    и количественном выражении согласно IDC,
+                    и выкупила у IBM бизнес по производству серверов на базе архитектуры x86.
+                </p>
+                <a href="#">Узнать ответ на вопрос</a>
+            </div>
+        </div>
+
+        <!-- Таб 19 -->
+        <div class="quiz-tab">
+            <div class="quiz-content">
+                <h3 class="quiz__heading">
+                    19. Какая сервисная услуга включает в себя установку обновлений микрокодов,
+                    BIOS и драйверов
+                    и конфигурирование всех компонентов в соответствии
+                    с внедряемым решением
+                </h3>
+                <p class="quiz__caption">Выберите один ответ</p>
+                <fieldset>
+                    <div class="inp-rad">
+                        <input type="radio" name="q19" id="ans58">
+                        <label for="ans58">Installation</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q19" id="ans59">
+                        <label for="ans59">Deployment</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q19" id="ans60">
+                        <label for="ans60">Foundation support</label>
+                    </div>
+                </fieldset>
+                <button class="btn quiz-next">следующий вопрос</button>
+            </div>
+
+            <div class="quiz-img"><img src="img/quiz_img (17).jpg" alt="img"></div>
+
             <div class="quiz-info">
                 <p>
                     В 2004 году Lenovo выкупила у IBM подразделение по производству ПК, что вызвало волну
@@ -692,23 +808,19 @@
                     <img src="img/logo_Lenovo.png" class="quiz__logo" alt="logo_Lenovo">
                 </picture>
                 <h2 class="quiz__heading">Для получения подарка, заполните информацию</h2>
-                <form action="#">
+                <form>
                     <div class="wrap">
-                        <input type="text" required disabled name="u-name" placeholder="Имя:">
-                        <input type="text" required disabled name="u-surname" placeholder="Фамилия:">
+                        <input type="text" disabled name="u-name" class="u_name" placeholder="Имя:">
+                        <input type="text" disabled name="u-surname" class="u_surname" placeholder="Фамилия:">
                     </div>
                     <div class="wrap">
-                        <select name="u-country">
-                            <option hidden>Страна</option>
-                        </select>
-                        <select name="u-citu">
-                            <option hidden>Город</option>
-                        </select>
+                        <input type="text" required name="u-country" placeholder="Страна">
+                        <input type="text" required name="u-city" placeholder="Город">
                     </div>
                     <input type="tel" required name="u-phone" placeholder="Номер телефона:">
                     <div class="wrap">
                         <input type="text" required name="u-address" placeholder="Адрес доставки">
-                        <input type="time" required name="u-time" placeholder="Удобное время доставки">
+                        <input type="text" required name="u-time" placeholder="Удобное время доставки">
                     </div>
                     <a href="#" type="submit" class="btn quiz-next">отправить </a>
                 </form>
@@ -737,7 +849,8 @@
     </footer>
 
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <script src="./js/script.js?ver=1234"></script>
 
 </body>
 
