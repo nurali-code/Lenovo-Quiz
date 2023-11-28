@@ -19,14 +19,14 @@
                 <source media="(min-width: 700px)" srcset="img/logo_Lenovo-2.jpg">
                 <img src="img/logo_Lenovo.png" class="quiz__logo" alt="logo_Lenovo">
             </picture>
-            <h2 class="quiz__heading">Участвуйте в викторине и <mark>получите гарантированный подарок!</mark></h2>
+            <h2 class="quiz__heading">Участвуйте в викторине <br> и <mark>получите гарантированный подарок!</mark></h2>
             <form id="first_form">
                 <div class="wrap">
                     <input type="text" required name="u-name" data-target-class="u_name" placeholder="Имя:">
                     <input type="text" required name="u-surname" data-target-class="u_surname" placeholder="Фамилия:">
                 </div>
-                <input type="email" required name="u-email" placeholder="Рабочая почта:">
-                <input type="text" required name="u-company" placeholder="Название компании:">
+                <input type="email" data-target-class="u_email" required name="u-email" placeholder="Рабочая почта:">
+                <input type="text" data-target-class="u_company" required name="u-company" placeholder="Название компании:">
                 <button type="submit" class="btn">начать викторину</button>
             </form>
         </div>
@@ -739,8 +739,8 @@
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
-                        <input type="radio" name="q18" id="ans55">
-                        <label for="ans55">Парт номера Professional
+                        <input type="radio" name="q18" id="ans551">
+                        <label for="ans551">Парт номера Professional
                             Services Tokens</label>
                     </div>
                     <div class="inp-rad">
@@ -833,6 +833,8 @@
                     <div class="wrap">
                         <input type="text" disabled name="u-name" class="u_name" placeholder="Имя:">
                         <input type="text" disabled name="u-surname" class="u_surname" placeholder="Фамилия:">
+                        <input type="hidden" disabled name="u-email" class="u_email" placeholder="Имя:">
+                        <input type="hidden" disabled name="u-company" class="u_company" placeholder="Фамилия:">
                     </div>
                     <div class="wrap">
                         <input type="text" required name="u-country" placeholder="Страна">
