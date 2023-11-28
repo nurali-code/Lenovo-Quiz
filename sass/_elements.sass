@@ -69,6 +69,20 @@ mark
         opacity: 1
         background-color: $second
 
+    &[disabled]
+        color: rgba(white, .2)
+        background-color: rgba($second, .5)
+        cursor: unset
+        animation: none
+        pointer-events: none
+        box-shadow: none
+        transition: none
+        color: transparent
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: auto 80%
+        background-image: url('../img/loader.gif')
+
 section
     padding: 60px 0
 
@@ -141,6 +155,7 @@ input, select, textarea
             min-height: 55px
             position: relative
             z-index: 1
+            transition: all ease .3s
 
             font-size: 18px
             font-weight: 500
@@ -157,10 +172,26 @@ input, select, textarea
             visibility: hidden
             &:checked ~ label
                 background-color: #fff
+                border-color: #366EFF
+
+            &:disabled ~ label
+                opacity: .4
+
+        &.err
+            label
+                opacity: 1 !important
+                border-color: #E42828 !important
+                box-shadow: 0 0 0 2px #E42828
+        &.ok
+            label
+                opacity: 1 !important
+                border-color: #6FBE47 !important
+                box-shadow: 0 0 0 2px #6FBE47
+        &.disable
 
         &:hover
             label
-                background-color: #fff
+                // background-color: #fff
 
 @media screen and ( max-width: 1500px )
     .container
