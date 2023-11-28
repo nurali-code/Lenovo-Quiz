@@ -37,7 +37,6 @@ $(document).ready(function () {
 
     $('.quiz-finish').on('click', function (e) {
         var percentage = Math.floor(($('.ok').length / Object.keys(answers).length) * 100);
-        percentage = 95;
         if (percentage < 90) {
             $('.quiz-resoult .quiz-form').hide()
             $('.quiz-resoult__heading').html('К сожалению вы набрали <span> всего ' + percentage + ' балов </span>')
