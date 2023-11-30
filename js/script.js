@@ -49,7 +49,7 @@ $(document).ready(function () {
         });
     });
 
-    const answers = { q1: 2, q2: 3, q3: 1, q4: 4, q5: 1, q6: 2, q7: 5, q8: 3, q9: 4, q10: 2, q11: 2, q12: 2, q13: 1, q14: 2, q15: 3, q16: 2, q17: 1, q18: 2, q19: 2 };
+    const answers = { q1: 2, q2: 3, q3: 1, q4: 4, q5: 1, q6: 2, q7: 5, q8: 3, q9: 4, q10: 2, q11: 2, q12: 2, q13: 1, q14: 2, q15: 3, q16: 3, q17: 2, q18: 1, q19: 2 };
 
     $('.quiz-next').on('click', function (e) {
 
@@ -136,7 +136,5 @@ $(document).ready(function () {
         });
 
     })
-
-
 
 });
