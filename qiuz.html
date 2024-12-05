@@ -41,6 +41,18 @@
                     <input type="text" required name="u_name" data-target-class="u_name" placeholder="Имя:">
                     <input type="text" required name="u_surname" data-target-class="u_surname" placeholder="Фамилия:">
                 </div>
+                <div class="wrap">
+                    <select name="u_country" required data-target-class="u_country">
+                        <option hidden value="">Страна:</option>
+                        <option value="Узбекистан">Узбекистан</option>
+                        <option value="Кыргызстан">Кыргызстан</option>
+                        <option value="Казахстан">Казахстан</option>
+                        <option value="Армения">Армения</option>
+                        <option value="Молдова">Молдова</option>
+                        <option value="Грузия">Грузия</option>
+                    </select>
+                    <input type="text" required name="u_city" data-target-class="u_city" placeholder="Город:">
+                </div>
                 <input type="email" data-target-class="u_email" required name="u_email" placeholder="Рабочая почта:">
                 <input type="text" data-target-class="u_company" required name="u_company"
                     placeholder="Название компании:">
@@ -51,28 +63,29 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    1. Какое место в мире занимает <mark>Lenovo</mark> по поставке
-                    серверного оборудования на текущий момент?
+                    1. На каком месте по надёжности среди архитектуры 
+                    x86 находятся серверы Lenovo согласно последнему
+                    аналитическом отчёту ITIC?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q1" id="ans1">
-                        <label for="ans1">2</label>
+                        <label for="ans1">1</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q1" id="ans2">
-                        <label for="ans2">3</label>
+                        <label for="ans2">2</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q1" id="ans3">
-                        <label for="ans3">4</label>
+                        <label for="ans3">3</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img.jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-1.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -82,7 +95,8 @@
                     и количественном выражении согласно IDC,
                     и выкупила у IBM бизнес по производству серверов на базе архитектуры x86.
                 </p>
-                <a href="https://habr.com/ru/companies/lenovo/articles/339980/" target="_blank">ПОДСКАЗКА - найти ответ на вопрос</a>
+                <a href="https://habr.com/ru/companies/lenovo/articles/339980/" target="_blank">ПОДСКАЗКА - найти ответ
+                    на вопрос</a>
             </div>
         </div>
 
@@ -90,27 +104,28 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    2. Сколько лет подряд серверы Lenovo удерживают <br>1 место/лидирует по надежности в мире?
+                    2. На каком месте по количеству инсталлированных
+                    систем Lenovo фигурирует в списке TOP500?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
                         <input value="1" type="radio" name="q2" id="ans4">
-                        <label for="ans4">3 года</label>
+                        <label for="ans4">1</label>
                     </div>
                     <div class="inp-rad">
                         <input value="2" type="radio" name="q2" id="ans5">
-                        <label for="ans5">6 лет</label>
+                        <label for="ans5">2</label>
                     </div>
                     <div class="inp-rad">
                         <input value="3" type="radio" name="q2" id="ans6">
-                        <label for="ans6">9 лет</label>
+                        <label for="ans6">500</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (1).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-2.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -122,7 +137,8 @@
                 </p>
                 <a target="_blank"
                     href="https://drive.google.com/file/d/1dHpyB4QYv4ozVy04_f348jnzf0mQp_66/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1dHpyB4QYv4ozVy04_f348jnzf0mQp_66/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                    download="https://drive.google.com/file/d/1dHpyB4QYv4ozVy04_f348jnzf0mQp_66/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -130,7 +146,8 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    3. Какое место в мире занимает Lenovo по продаже СХД начального уровня до 25K USD?
+                    3. Какое место в мире занимает Lenovo по продаже
+                    СХД начального уровня до 25K USD?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
@@ -150,7 +167,7 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (2).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-3.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -168,31 +185,32 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    4. В каких городах расположены склады запчастей Lenovo ISG в регионе EECA?
+                    4. В каких городах расположены склады запчастей
+                    Lenovo ISG в регионе EECA? 
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q4" id="ans10">
-                        <label for="ans10">Алматы</label>
+                        <label for="ans10">Алматы, Баку, Ташкент</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q4" id="ans11">
-                        <label for="ans11">Баку</label>
+                        <label for="ans11">Алматы, Ереван, Тбилиси</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q4" id="ans12">
-                        <label for="ans12">Ташкент</label>
+                        <label for="ans12">Баку, Кишинев, Ташкент</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q4" id="ans13">
-                        <label for="ans13">Все перечисленные</label>
+                        <label for="ans13">Все вышеперечисленные</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (3).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-4.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -203,7 +221,8 @@
                 </p>
                 <a target="_blank"
                     href="https://drive.google.com/file/d/1dHpyB4QYv4ozVy04_f348jnzf0mQp_66/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1dHpyB4QYv4ozVy04_f348jnzf0mQp_66/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                    download="https://drive.google.com/file/d/1dHpyB4QYv4ozVy04_f348jnzf0mQp_66/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -211,28 +230,29 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    5. Какую СХД предложить заказчику, если нужна простая, быстрая, надежная СХД с блочным доступом и
-                    максимальной доступностью 99.9999%?
+                    5. Заказчику нужна блочная СХД, которая обеспечит
+                    более 1M IOPS, а также возможность создания гибридных
+                    конфигураций (SSD + HDD). Какую СХД стоит рассмотреть?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q5" id="ans14">
-                        <label for="ans14">DE</label>
+                        <label for="ans14">DE6000F</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q5" id="ans15">
-                        <label for="ans15">DG</label>
+                        <label for="ans15">DE6400H</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q5" id="ans16">
-                        <label for="ans16">DM</label>
+                        <label for="ans16">DE6600H</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (4).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-5.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -242,7 +262,8 @@
                 </p>
                 <a target="_blank"
                     href="https://drive.google.com/file/d/14wMbQVuYUog7tWqTqeCdkjS1qcjFk_oS/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/14wMbQVuYUog7tWqTqeCdkjS1qcjFk_oS/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                    download="https://drive.google.com/file/d/14wMbQVuYUog7tWqTqeCdkjS1qcjFk_oS/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -250,28 +271,28 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    6. Какая серия СХД обеспечивает хранение данных на базе технологии All-Flash (NVMe QLC) по цене
-                    жестких дисков и помогает сократить на 80% используемые площади ЦОД и на 70% - энергопотребление?
+                    6. Какие серверные платформы Lenovo поддерживают
+                    новейшие процессоры Intel Xeon 6?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q6" id="ans17">
-                        <label for="ans17">DE</label>
+                        <label for="ans17">ThinkSystem v3</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q6" id="ans18">
-                        <label for="ans18">DG</label>
+                        <label for="ans18">ThinkEdge v3</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q6" id="ans19">
-                        <label for="ans19">DM</label>
+                        <label for="ans19">ThinkSystem v4</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (5).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-6.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -283,7 +304,8 @@
                 </p>
                 <a target="_blank"
                     href="https://drive.google.com/file/d/14wMbQVuYUog7tWqTqeCdkjS1qcjFk_oS/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/14wMbQVuYUog7tWqTqeCdkjS1qcjFk_oS/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                    download="https://drive.google.com/file/d/14wMbQVuYUog7tWqTqeCdkjS1qcjFk_oS/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -291,35 +313,32 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    7. В канале Lenovo можно приобрести лицензии ПО следующих разработчиков:
+                    7. Проект предусматривает унифицированную СХД
+                    с файловым и блочным доступом класса all-flash.
+                    В условиях агрессивной конкуренции нужно
+                    предложить решение, которое позволит заказчику
+                    размещать данные на NVMe QLC с оптимизацией
+                    стоимости хранения информации?
                 </h3>
                 <p class="quiz__caption">Выберите один или несколько ответов</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q7" id="ans20">
-                        <label for="ans20">VMware</label>
+                        <label for="ans20">DE</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q7" id="ans21">
-                        <label for="ans21">Veeam</label>
+                        <label for="ans21">DG</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q7" id="ans22">
-                        <label for="ans22">Nutanix</label>
-                    </div>
-                    <div class="inp-rad">
-                        <input type="radio" name="q7" id="ans23">
-                        <label for="ans23">Microsoft и RedHat</label>
-                    </div>
-                    <div class="inp-rad">
-                        <input type="radio" name="q7" id="ans24">
-                        <label for="ans24">Все перечисленные</label>
+                        <label for="ans22">DM</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (6).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-7.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -329,8 +348,10 @@
                     Клиенты могут быть уверены в приобретении
                     высококачественных решений для своих потребностей в цифровой среде.
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -338,27 +359,36 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    8. Можно ли в канале Lenovo купить лицензии VMware и Veeam с поддержкой от разработчика?
+                    8. В канале Lenovo можно приобрести лицензии
+                    ПО следующих разработчиков:
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q8" id="ans25">
-                        <label for="ans25">Можно только в случае покупки железа</label>
+                        <label for="ans25">VMware</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q8" id="ans26">
-                        <label for="ans26">Нельзя</label>
+                        <label for="ans26">Veeam</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q8" id="ans27">
-                        <label for="ans27">Можно независимо от покупки железа</label>
+                        <label for="ans27">Nutanix</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q8" id="ans27_2">
+                        <label for="ans27_2">Microsoft и RedHat</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q8" id="ans27_3">
+                        <label for="ans27_3">Все перечисленные</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (7).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-8.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -368,8 +398,10 @@
                     признанным лидером в области решений для резервного
                     копирования и восстановления данных в виртуализированных средах.
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/1DvmCAjvlWsphO1BGDxOD8D7gHuIobpIm/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1DvmCAjvlWsphO1BGDxOD8D7gHuIobpIm/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1DvmCAjvlWsphO1BGDxOD8D7gHuIobpIm/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/1DvmCAjvlWsphO1BGDxOD8D7gHuIobpIm/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -377,32 +409,28 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    9. Серверы какой серии выдерживают высокие температуры, имеют защиту от вибрации и пыли, сниженный
-                    уровень шума и могут быть установлены вне серверной комнаты или дата-центра (на периферии)?
+                    9. Можно ли в канале Lenovo купить лицензии Red Hat 
+                    и Veeam с поддержкой от разработчика?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q9" id="ans28">
-                        <label for="ans28">Любой</label>
+                        <label for="ans28">Можно только в случае покупки железа от Lenovo</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q9" id="ans29">
-                        <label for="ans29">Серия ST (Tower)</label>
+                        <label for="ans29">Нельзя</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q9" id="ans30">
-                        <label for="ans30">Серия SR (Rack)</label>
-                    </div>
-                    <div class="inp-rad">
-                        <input type="radio" name="q9" id="ans31">
-                        <label for="ans31">Серия SE (Edge)</label>
+                        <label for="ans30">Можно независимо от покупки железа</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (8).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-9.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -412,8 +440,10 @@
                     могут получить значительные выгоды
                     от инфраструктуры, которая отвечает требованиям современного бизнеса.
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -421,29 +451,34 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    10. Какая серия оборудования решит задачу построения частного облака для запуска виртуальных машин,
-                    контейнерных приложений, файловых, блочных и объектных сервисов хранения данных, виртуального
-                    межсетевого экрана и других функций и позволит управлять всей инфраструктурой из одного окна?
+                    10. Какая линейка серверов ориентирована
+                    на периферийные и IoT инсталляции, поддерживает
+                    установку вне серверной комнаты или дата-центра,
+                    пригодна для работы в агрессивных средах?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q10" id="ans32">
-                        <label for="ans32">ThinkHCI HX</label>
+                        <label for="ans32">Любой</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q10" id="ans33">
-                        <label for="ans33">ThinkAgile HX</label>
+                        <label for="ans33">Серия ST (Tower)</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q10" id="ans34">
-                        <label for="ans34">ThinkNutanix HX</label>
+                        <label for="ans34">Серия SR (Rack)</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q10" id="ans34_2">
+                        <label for="ans34_2">Серия SE (Edge)</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (9).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-10.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -461,15 +496,17 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    11. Если заказчик хочет построить современную, гибкую инфраструктуру, которая позволит запускать
-                    различные сервисы, предоставит платформу даже для AI-приложений и будет иметь возможность легкого
-                    горизонтального масштабирования ресурсов, то стоит рассмотреть:
+                    11. Если заказчик хочет построить современную, гибкую
+                    инфраструктуру, которая позволит запускать различные
+                    сервисы, предоставит платформу для AI-приложений
+                    и будет иметь возможность легкого горизонтального
+                    масштабирования ресурсов, то стоит рассмотреть:
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q11" id="ans35">
-                        <label for="ans35">Rack-серверы</label>
+                        <label for="ans35">Rack-серверы и облачную СХД</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q11" id="ans36">
@@ -477,13 +514,13 @@
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q11" id="ans37">
-                        <label for="ans37">Такого не бывает</label>
+                        <label for="ans37">Классическую трёхуровневую архитектуру (серверы–сеть–СХД)</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (10).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-11.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -494,8 +531,10 @@
                     предоставляемой платформы.
 
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/10hzFfBxLiPSlUjIwTZUYWjLbxA3TYwVS/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -503,32 +542,29 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    12. Что вы посоветуете, если у заказчика назрела необходимость обновления парка серверов и СХД для
-                    платформы виртуализации VMware, чтобы инвестиции в обновление были эффективны и позволили бы
-                    получить производительную, гибкую платформу с возможностью бесшовного масштабирования в будущем?
+                    12. В проекте рассматривается гиперконвергентное
+                    решение на базе ПО VMware. Какое решение
+                    из портфолио Lenovo стоит предложить?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q12" id="ans38">
-                        <label for="ans38">Продлить поддержку на текущие устаревшие серверы и СХД и продолжать
-                            использовать неэффективное оборудование</label>
+                        <label for="ans38">ThinkAgile MX</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q12" id="ans39">
-                        <label for="ans39">Выбрать современную гиперконвергентную платформу ThinkAgile VX на базе
-                            технологий VMware</label>
+                        <label for="ans39">ThinkAgile VX</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q12" id="ans40">
-                        <label for="ans40">Купить СХД, а старые серверы пусть дальше работают, несмотря на неэффективное
-                            использование дорогих лицензий на ПО виртуализации</label>
+                        <label for="ans40">ThinkAgile HX</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (11).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-12.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -537,8 +573,10 @@
                     современной, гибкой и конкурентоспособной инфраструктуры. С нами вы в шаге от реализации ваших
                     амбициозных цифровых стратегий.
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/1f0Bi2sq3fQh6Xqlc90ElnsR848WN5OLy/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1f0Bi2sq3fQh6Xqlc90ElnsR848WN5OLy/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1f0Bi2sq3fQh6Xqlc90ElnsR848WN5OLy/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/1f0Bi2sq3fQh6Xqlc90ElnsR848WN5OLy/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -546,35 +584,46 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    13. Как называется программа индивидуальной мотивации сотрудников партнера за продажи и обучение с
-                    выплатой живыми деньгами?
+                    13. Проект предусматривает построение
+                    катастрофоустойчивой архитектуры, заказчику
+                    важно обеспечить автоматизацию отказа одного
+                    ЦОД. Заказчик просит предоставить несколько
+                    вариантов решения на выбор. Какие варианта стоит
+                    рассматривать?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q13" id="ans41">
-                        <label for="ans41">LEAP</label>
+                        <label for="ans41">Гиперконвергентные решения ThinkAgile + комбинацию серверов ThinkSystem c СХД
+                            линеек DM и DG.</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q13" id="ans42">
-                        <label for="ans42">Elevate</label>
+                        <label for="ans42">Гиперконвергентные решения ThinkAgile + комбинацию серверов ThinkSystem c СХД
+                            линеек DE.</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q13" id="ans43">
-                        <label for="ans43">Engage</label>
+                        <label for="ans43">Периферийные решения ThinkEdge + гиперконвергентные
+                            решения ThinkAgile.</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (12).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-13.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
-                    В данной программе можно получить баллы не только за продажи, но и за обучение/прохождение курсов online. <br> Вступайте в программу, достигайте выдающихся результатов и получайте реальные деньги за свои успехи с Lenovo!
+                    В данной программе можно получить баллы не только за продажи, но и за обучение/прохождение курсов
+                    online. <br> Вступайте в программу, достигайте выдающихся результатов и получайте реальные деньги за
+                    свои успехи с Lenovo!
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/19JI5eiHvy7V4SYCHoqzDCcbAy0YrXFyL/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/19JI5eiHvy7V4SYCHoqzDCcbAy0YrXFyL/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/19JI5eiHvy7V4SYCHoqzDCcbAy0YrXFyL/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/19JI5eiHvy7V4SYCHoqzDCcbAy0YrXFyL/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -582,8 +631,9 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    14. Как называется квартальная программа для партнеров уровня Authorized ISG с выплатой рибейтов
-                    просто за оборот?
+                    14. Как называется программа индивидуальной
+                    мотивации сотрудников партнера за продажи
+                    и обучение с выплатой живыми деньгами? 
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
@@ -603,14 +653,16 @@
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (13).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-14.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>Программа адаптируется к потребностям каждого партнера, предоставляя персонализированные возможности
                     для максимизации доходов. <br> Минимальный план продаж ISG в данной программе = $5 000
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/1UTkSHAMxHYKti8PkWIXVevZ4tQWQNCDl/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1UTkSHAMxHYKti8PkWIXVevZ4tQWQNCDl/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1UTkSHAMxHYKti8PkWIXVevZ4tQWQNCDl/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/1UTkSHAMxHYKti8PkWIXVevZ4tQWQNCDl/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -618,34 +670,39 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    15. Какой размер рибейта получает реселлер при размещении заказа на продукты Veeam >2000 USD в этом квартале?
+                    15. Как называется квартальная программа для
+                    партнеров уровня Authorized ISG c выплатой
+                    рибейтов просто за оборот?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q15" id="ans47">
-                        <label for="ans47">150 USD</label>
+                        <label for="ans47">LEAP</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q15" id="ans48">
-                        <label for="ans48">200 USD</label>
+                        <label for="ans48">Elevate</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q15" id="ans49">
-                        <label for="ans49">250 USD</label>
+                        <label for="ans49">Engage</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (14).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-15.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
-                    Кроме того за каждую регистрацию проекта + бида на Lenovo Bid Portal (LBP), содержащего продукты этого производителя, - партнер получает рибейт 150 USD
+                    Кроме того за каждую регистрацию проекта + бида на Lenovo Bid Portal (LBP), содержащего продукты
+                    этого производителя, - партнер получает рибейт 150 USD
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/1Zly_fk3nU9YX7Osca8eFhJe926uoIIDp/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1Zly_fk3nU9YX7Osca8eFhJe926uoIIDp/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1Zly_fk3nU9YX7Osca8eFhJe926uoIIDp/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/1Zly_fk3nU9YX7Osca8eFhJe926uoIIDp/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -653,35 +710,40 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    16. Каким цветом обозначены компоненты горячей замены в серверах Lenovo? 
+                    16. Как называется система управления
+                    и мониторинга инфраструктуры от Lenovo? 
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q16" id="ans50">
-                        <label for="ans50">красный</label>
+                        <label for="ans50">XClarity Controller</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q16" id="ans51">
-                        <label for="ans51">голубой</label>
+                        <label for="ans51">XClarity Adminstrator</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q16" id="ans52">
-                        <label for="ans52">терракотовый (оранжево-красный)</label>
+                        <label for="ans52">У Lenovo нет такого предложения</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (15).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-16.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
-                    В мире информационных технологий, где скорость и эффективность играют ключевую роль, Lenovo внедряет инновационные решения для упрощения 
-обслуживания серверов. Одним из таких решений является цветовая кодировка компонентов горячей замены.
+                    В мире информационных технологий, где скорость и эффективность играют ключевую роль, Lenovo внедряет
+                    инновационные решения для упрощения
+                    обслуживания серверов. Одним из таких решений является цветовая кодировка компонентов горячей
+                    замены.
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/1PVju1JQgyQ3ypbl2EVDWt--HrecAX3md/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1PVju1JQgyQ3ypbl2EVDWt--HrecAX3md/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1PVju1JQgyQ3ypbl2EVDWt--HrecAX3md/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/1PVju1JQgyQ3ypbl2EVDWt--HrecAX3md/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -689,35 +751,41 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    17. Какой уровень сервиса обеспечивает фиксированное время замены запчастей в течение 24 часов с момента открытия заявки? 
+                    17. В чём преимущество уровня гарантийной
+                    поддержки Premier? 
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q17" id="ans53">
-                        <label for="ans53">Premier Foundation</label>
+                        <label for="ans53">Только для этого уровня возможен выезд сервисного инженера на площадку
+                            заказчика</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q17" id="ans54">
-                        <label for="ans54">Premier Essential</label>
+                        <label for="ans54">Доступ к online управлению сервисными заявками, прямой доступ к сервисным
+                            инженерам Lenovo</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q17" id="ans55">
-                        <label for="ans55">Foundation</label>
+                        <label for="ans55">В отличие от базового уровня для Premier возможно продление до 5 лет.</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (16).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-16.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
-                    В случае покупки повышения уровня поддержки до Premier заказчик получит прямой доступ к техническим специалистам Lenovo уровня 2 по выделенной 
-телефонной линии, что значительно упростит коммуникацию и ускорит решение кейза.
+                    В случае покупки повышения уровня поддержки до Premier заказчик получит прямой доступ к техническим
+                    специалистам Lenovo уровня 2 по выделенной
+                    телефонной линии, что значительно упростит коммуникацию и ускорит решение кейза.
                 </p>
-                <a target="_blank" href="https://drive.google.com/file/d/1AYz7DWrCaGbxJTA_mX3qU-F7fsYoqxfp/view?usp=drive_link"
-                    download="https://drive.google.com/file/d/1AYz7DWrCaGbxJTA_mX3qU-F7fsYoqxfp/view?usp=drive_link">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1AYz7DWrCaGbxJTA_mX3qU-F7fsYoqxfp/view?usp=drive_link"
+                    download="https://drive.google.com/file/d/1AYz7DWrCaGbxJTA_mX3qU-F7fsYoqxfp/view?usp=drive_link">ПОДСКАЗКА
+                    - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
@@ -725,29 +793,30 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    18. Как называется новый удобный инструмент для заказа услуг по инсталляции, внедрению и оптимизации
-                    инфраструктуры
-                    без предварительного согласования плана работ:
+                    18. Как называется новый удобный инструмент
+                    для заказа услуг по инсталляции, внедрению
+                    и оптимизации инфраструктуры без предварительного
+                    согласования плана работ:
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q18" id="ans551">
-                        <label for="ans551">Парт номера Professional Services Tokens</label>
+                        <label for="ans551">Парт номера Professional Services Tokens</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q18" id="ans56">
-                        <label for="ans56">Сервисный договор LSCS</label>
+                        <label for="ans56">Сервисный договор LSCS</label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q18" id="ans57">
-                        <label for="ans57">Парт номера Premier</label>
+                        <label for="ans57">Парт номера Premier</label>
                     </div>
                 </fieldset>
                 <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (17).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-17.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -763,30 +832,40 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    19. Какая сервисная услуга включает в себя установку обновлений микрокодов,
-                    BIOS и драйверов
-                    и конфигурирование всех компонентов в соответствии
-                    с внедряемым решением
+                    19. Где вы можете повысить свои технические знания
+                    по инфраструктурным продуктам и решениям Lenovo?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
                     <div class="inp-rad">
                         <input type="radio" name="q19" id="ans58">
-                        <label for="ans58">Installation</label>
+                        <label for="ans58"><span>На партнерском портале <a
+                                    href="http://lenovopartnerhub.com">www.lenovopartnerhub.com</a>
+                                ->Training-> Lenovo Partner Learning</span></label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q19" id="ans59">
-                        <label for="ans59">Deployment</label>
+                        <label for="ans59"><span>
+                                Глубокое техническое обучение у авторизованного центра <a
+                                    href="https://www.lenovopartnerhub.com">www.lenovopartnerhub.com</a>
+                            </span></label>
                     </div>
                     <div class="inp-rad">
                         <input type="radio" name="q19" id="ans60">
-                        <label for="ans60">Foundation support</label>
+                        <label for="ans60"><span>
+                                c.  На портале с записанными вебинарами <a
+                                    href="https://lenovo-games.com/">lenovo-games.com</a>
+                            </span></label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q19" id="ans60_2">
+                        <label for="ans60_2">Всё вышеперечисленное</label>
                     </div>
                 </fieldset>
-                <button class="btn quiz-next quiz-finish">следующий вопрос</button>
+                <button class="btn quiz-next">следующий вопрос</button>
             </div>
 
-            <div class="quiz-img"><img src="img/quiz_img (17).jpg" alt="img"></div>
+            <div class="quiz-img"><img src="img/q-17.jpg" alt="img"></div>
 
             <div class="quiz-info">
                 <p>
@@ -796,12 +875,53 @@
                     организации.
                 </p>
                 <a target="_blank" href="https://drive.google.com/file/d/1GlDA0In0SV3Io5LMpQQFw2TJn42XF9PO/view"
-                    download="https://drive.google.com/file/d/1GlDA0In0SV3Io5LMpQQFw2TJn42XF9PO/view">ПОДСКАЗКА - найти ответ на вопрос<img src="img/get.png" alt="get"></a>
+                    download="https://drive.google.com/file/d/1GlDA0In0SV3Io5LMpQQFw2TJn42XF9PO/view">ПОДСКАЗКА - найти
+                    ответ на вопрос<img src="img/get.png" alt="get"></a>
+            </div>
+        </div>
+
+        <!-- Таб 20 -->
+        <div class="quiz-tab">
+            <div class="quiz-content">
+                <h3 class="quiz__heading">
+                    20. Какое максимальное количество ядер на сокет
+                    для Intel Xeon 6 Sierra Forest:
+                </h3>
+                <p class="quiz__caption">Выберите один ответ</p>
+                <fieldset>
+                    <div class="inp-rad">
+                        <input type="radio" name="q20" id="ans61">
+                        <label for="ans61">144</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q20" id="ans62">
+                        <label for="ans62">256</label>
+                    </div>
+                    <div class="inp-rad">
+                        <input type="radio" name="q20" id="ans63">
+                        <label for="ans63">128</label>
+                    </div>
+                </fieldset>
+                <button class="btn quiz-next quiz-finish">следующий вопрос</button>
+            </div>
+
+            <div class="quiz-img"><img src="img/q-17.jpg" alt="img"></div>
+
+            <div class="quiz-info">
+                <p>
+                    Внедрение нового решения может оказаться длительным и трудоемким проектом. Оптимизируйте свой ЦОД
+                    таким образом, чтобы внедрять новые технологии быстро и легко. Мы поможем вам свести риски к
+                    минимуму, а также гарантируем соответствие вашего нового решения конкретным потребностям вашей
+                    организации.
+                </p>
+                <a target="_blank" href="https://drive.google.com/file/d/1GlDA0In0SV3Io5LMpQQFw2TJn42XF9PO/view"
+                    download="https://drive.google.com/file/d/1GlDA0In0SV3Io5LMpQQFw2TJn42XF9PO/view">ПОДСКАЗКА - найти
+                    ответ на вопрос<img src="img/get.png" alt="get"></a>
             </div>
         </div>
 
         <!-- quiz-range-->
-        <div class="quiz-tab quiz-resoult">
+        <div class="quiz-tab quiz-resoult active">
             <h3 class="quiz-resoult__heading" id="resoult__heading">Поздравляем!</h3>
             <p class="quiz-resoult__text" id="resoult__text">Вы прошли викторину и набрали 90 баллов</p>
             <div class="quiz-range">
@@ -818,17 +938,23 @@
                 </picture>
                 <h2 class="quiz__heading">Для получения подарка заполните информацию</h2>
                 <form id="last_form">
+                    <select name="u_type" id="">
+                        <option value="Offline">Offline</option>
+                        <option value="Online-подписка">Online-подписка</option>
+                    </select>
                     <div class="wrap">
-                        <input type="text" name="u_name" class="u_name" placeholder="Имя:">
-                        <input type="text" name="u_surname" class="u_surname" placeholder="Фамилия:">
-                        <input type="hidden" name="u_email" class="u_email" placeholder="Имя:">
-                        <input type="hidden" name="u_company" class="u_company" placeholder="Фамилия:">
+                        <input disabled type="text" name="u_name" class="u_name">
+                        <input disabled type="text" name="u_surname" class="u_surname">
+                        <input disabled type="hidden" name="u_name" class="u_name">
+                        <input disabled type="hidden" name="u_surname" class="u_surname">
                     </div>
                     <div class="wrap">
-                        <input type="text" required name="u_country" placeholder="Страна">
-                        <input type="text" required name="u_city" placeholder="Город">
+                        <input disabled type="text" required class="u_country" name="u_country">
+                        <input disabled type="text" required class="u_city" name="u_city">
+                        <input disabled type="hidden" required class="u_country" name="u_country">
+                        <input disabled type="hidden" required class="u_city" name="u_city">
                     </div>
-                    <input type="tel" required name="u_phone" placeholder="Номер телефона: +7(000)-000-00-00">
+                    <input type="tel" required name="u_phone" placeholder="Номер телефона:">
                     <div class="wrap">
                         <input type="text" required name="u_address" placeholder="Адрес доставки">
                         <input type="text" required name="u_time" placeholder="Удобное время доставки">

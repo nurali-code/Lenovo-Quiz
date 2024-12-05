@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('[data-target-class]').on('input', function (e) {
+    $('[data-target-class]').on('change', function (e) {
         const targetClass = $(this).attr('data-target-class');
         $(`.${targetClass}`).val($(this).val());
     });
@@ -24,6 +24,15 @@ $(document).ready(function () {
         const formParet = $(this).parents('.quiz-tab');
         const formEmail = $(this).find('input[name="u_email"]');
         const formCompany = $(this).find('input[name="u_company"]');
+        const formCountry = $(this).find('select[name="u_country"]');
+
+        if (formCountry.val() !== 'Кыргызстан' && formCountry.val() !== 'Узбекистан') {
+            console.log($('select[name="u_type"]'));
+            $('select[name="u_type"]').val('Online-подписка')
+            $('select[name="u_type"], input[name="u_address"], input[name="u_time"]').prop('disabled', true);
+        } else { }
+
+        nextTab(formParet); // delete
 
         var formData = $(this).serialize();
         $.ajax({
@@ -49,7 +58,7 @@ $(document).ready(function () {
         });
     });
 
-    const answers = { q1: 2, q2: 3, q3: 1, q4: 4, q5: 1, q6: 2, q7: 5, q8: 3, q9: 4, q10: 2, q11: 2, q12: 2, q13: 1, q14: 2, q15: 3, q16: 3, q17: 2, q18: 1, q19: 2 };
+    const answers = { q1: 1, q2: 1, q3: 1, q4: 1, q5: 3, q6: 3, q7: 2, q8: 5, q9: 3, q10: 4, q11: 2, q12: 2, q13: 1, q14: 1, q15: 2, q16: 1, q17: 2, q18: 1, q19: 4, q20: 1 };
 
     $('.quiz-next').on('click', function (e) {
 
@@ -103,7 +112,6 @@ $(document).ready(function () {
         $(this).next('.dropdown-content').slideToggle();
     })
 
-
     $('#last_form').on('submit', function (e) {
         e.preventDefault();
         $(this).find('.btn').attr('disabled', 'disabled')
@@ -115,9 +123,7 @@ $(document).ready(function () {
             type: 'POST',
             url: 'save.php',
             data: formData,
-            success: function (response) {
-                console.log(response);
-            },
+            success: function (response) { console.log(response); },
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
 
