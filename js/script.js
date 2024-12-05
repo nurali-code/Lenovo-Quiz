@@ -33,6 +33,7 @@ $(document).ready(function () {
         } else { }
 
         nextTab(formParet); // delete
+        $('body').addClass('white')
 
         var formData = $(this).serialize();
         $.ajax({
@@ -85,6 +86,7 @@ $(document).ready(function () {
     });
 
     $('.quiz-finish').on('click', function (e) {
+        $('body').removeClass('white')
         var percentage = Math.floor(($('.ok').length / Object.keys(answers).length) * 100);
         if (percentage < 90) {
             $('.quiz-resoult .quiz-form').hide()
