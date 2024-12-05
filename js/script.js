@@ -76,7 +76,7 @@ $(document).ready(function () {
     });
 
     $('.quiz-finish').on('click', function (e) {
-        var percentage = Math.floor((($('.ok').length + 1) / Object.keys(answers).length) * 100);
+        var percentage = Math.floor(($('.ok').length / Object.keys(answers).length) * 100);
         if (percentage < 90) {
             $('.quiz-resoult .quiz-form').hide()
             $('#resoult__heading').html('К сожалению вы набрали <span> всего ' + percentage + ' балов </span>')
@@ -103,7 +103,6 @@ $(document).ready(function () {
         $(this).next('.dropdown-content').slideToggle();
     })
 
-    $('input[name="u_phone"]').inputmask({ "mask": "+7_(999)_999_99_99" });
 
     $('#last_form').on('submit', function (e) {
         e.preventDefault();
@@ -122,7 +121,7 @@ $(document).ready(function () {
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
 
-        var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbyWm-SRbKXOnJ8kCWVipf25Eq3qdUk_ILcDTfOQgan3S-8fWXa2uajRPk2QylE5wZLd/exec';
+        var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbzX5394ys2G27i2nbNCymFjm_1XhIHgvk-6uiqLMLx4n0MX-5dfB-Vcqe2KXqVGpxOa/exec';
         $.ajax({
             type: 'POST',
             url: googleAppsScriptUrl,
