@@ -60,8 +60,10 @@
         font-weight: 500
         line-height: 150%
         letter-spacing: -0.198px
+
     @media screen and ( min-width: 700px )
         p
+
             background: url('../img/pattern_4.png'), linear-gradient(90deg, #11184F 17.3%, #4F123B 74.03%)
             background-repeat: no-repeat
             background-position: center right
@@ -216,6 +218,7 @@
         position: relative
         z-index: 1
         text-align: left
+        border: 1px solid #C7C8DA
 
     &-img
         width: 500px
@@ -288,28 +291,28 @@
             left: 15px
 
     &-info
-        min-height: 130px
         position: relative
         z-index: 1
         width: 100%
-        margin: 50px auto 0
+        max-width: 54%
+        margin: 50px 0 0
         background-color: #F5F5F5
-        padding: 22px 40px 22px 160px
+        padding: 22px 40px 22px 78px
+        gap: 12px
         &::before
             content: ''
             display: block
-            width: 82px
-            height: 138px
+            width: 39px
+            height: 64px
             position: absolute
-            left: 40px
-            bottom: 22px
+            left: 20px
+            top: -20px
             background-image: url('../img/lamp.png')
             background-repeat: no-repeat
+            background-size: contain
             background-position: center center
 
         p
-            width: 100%
-            margin-bottom: 9px
             font-size: 14px
             font-style: normal
             font-weight: 400
@@ -317,12 +320,8 @@
 
         a
             font-size: 14px
-            border-bottom: 1px solid #000
-            img
-                // display: inline-block
-                vertical-align: middle
-                width: 18px
-                margin-left: 3px
+            color: #366EFF
+            text-decoration: underline
 
     &__caption
         display: block
@@ -516,9 +515,10 @@
             margin-bottom: 12px
 
         &-info
-            padding: 50px 15px
-            margin-top: 100px
+            padding: 25px 18px
+            margin: 100px auto 0
             max-width: calc( 100% - 10px )
+            gap: 8px
             &::before
                 width: 65px
                 height: 65px
@@ -531,9 +531,9 @@
                 transform: translateX(-50%)
 
             p
+                width: 100%
                 font-size: 10px
                 line-height: 180%
-                margin-bottom: 15px
 
             a
                 font-size: 12px
@@ -553,7 +553,7 @@
 
         &-range
             width: 281px
-            margin-bottom: 60px
+            margin-bottom: 40px
             max-width: calc( 100% - 40px )
             &__bg,
             &__item
@@ -610,6 +610,8 @@
         padding: 50px 5px
         p
             font-size: 12px
+            line-height: 160%
+            font-weight: 400
             padding: 17px 15px 18px
             background: linear-gradient(90deg, #11184F 17.3%, #4F123B 74.03%)
 

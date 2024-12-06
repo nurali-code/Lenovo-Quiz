@@ -12,7 +12,6 @@ $(document).ready(function () {
         }
     });
 
-
     $('fieldset').each(function () {
         $(this).find('input[type=radio]').each(function (index) {
             $(this).val(index + 1);
@@ -37,19 +36,17 @@ $(document).ready(function () {
 
         if (formCountry.val() !== 'Казахстан' && formCountry.val() !== 'Узбекистан') {
             $('select[name="u_type"]').val('Online-подписка')
-            $('select[name="u_type"], input[name="u_address"], input[name="u_time"]').prop('disabled', true);
+            $('select[name="u_type"]').addClass('disabled')
+            $('input[name="u_address"], input[name="u_time"]').prop('disabled', true);
         }
 
-        nextTab(formParet); // delete
         $('body').addClass('white')
-
         var formData = $(this).serialize();
         $.ajax({
             type: 'POST',
             url: 'checker.php',
             data: formData,
             success: function (response) {
-
                 $(formParet).find('.btn').removeAttr('disabled');
                 if (response === "company_false ") {
                     addError(formParet, formCompany, 'Превышен лимит участников из вашей компании');
@@ -58,37 +55,30 @@ $(document).ready(function () {
                 } else if (response === "company_false email_false") {
                     addError(formParet, formEmail, 'Почта уже существует');
                     addError(formParet, formCompany, 'Превышен лимит участников из вашей компании');
-                } else {
-                    nextTab(formParet);
-                }
+                } else { nextTab(formParet); }
 
             },
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
     });
 
-    const answers = { q1: 1, q2: 1, q3: 1, q4: 1, q5: 3, q6: 3, q7: 2, q8: 5, q9: 3, q10: 4, q11: 2, q12: 2, q13: 1, q14: 1, q15: 2, q16: 1, q17: 2, q18: 1, q19: 4, q20: 1 };
+    const answers = { q1: 1, q2: 1, q3: 1, q4: 1, q5: 3, q6: 3, q7: 2, q8: 5, q9: 3, q10: 4, q11: 2, q12: 2, q13: 1, q14: 1, q15: 2, q16: 2, q17: 2, q18: 1, q19: 4, q20: 1 };
 
     $('.quiz-next').on('click', function (e) {
-
         var selectedRadio = $(this).parent().find('input[type=radio]:checked');
         var allRadios = $(this).parent().find('input[type=radio]');
 
         if (selectedRadio.length > 0) {
             var name = selectedRadio.attr('name');
             var value = selectedRadio.val();
-            if (answers[name] == value) {
-                selectedRadio.closest(".inp-rad").addClass("ok");
-            } else {
-                selectedRadio.closest(".inp-rad").addClass("err");
-            }
+            if (answers[name] == value) { selectedRadio.closest(".inp-rad").addClass("ok"); }
+            else { selectedRadio.closest(".inp-rad").addClass("err"); }
             $(allRadios).attr('disabled', 'disabled')
             $(this).attr('disabled', 'disabled')
-
             setTimeout(() => {
                 nextTab($(this).parents('.quiz-tab'));
+                $('html, body').animate({ scrollTop: 0 }, 300,)
             }, Math.floor(Math.random() * (1500 - 600 + 1)) + 600);
-
         } else { alert('Пожалуйста, выберите хотя бы один вариант ответа.'); }
 
     });
@@ -96,6 +86,7 @@ $(document).ready(function () {
     $('.quiz-finish').on('click', function (e) {
         $('body').removeClass('white')
         var percentage = Math.floor(($('.ok').length / Object.keys(answers).length) * 100);
+        var percentage = 100; // delete
         if (percentage < 90) {
             $('.quiz-resoult .quiz-form').hide()
             $('#resoult__heading').html('К сожалению вы набрали <span> всего ' + percentage + ' балов </span>')
@@ -118,16 +109,13 @@ $(document).ready(function () {
     }
 
     $('.dropdown-btn').on('click', function (e) {
-        $(this).toggleClass('active');
-        $(this).next('.dropdown-content').slideToggle();
+        $(this).toggleClass('active').next('.dropdown-content').slideToggle(250);
     })
 
     $('#last_form').on('submit', function (e) {
         e.preventDefault();
         $(this).find('.btn').attr('disabled', 'disabled')
-
         const formParet = $(this).parents('.quiz-tab');
-
         var formData = $(this).serialize();
         $.ajax({
             type: 'POST',
@@ -137,7 +125,7 @@ $(document).ready(function () {
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
 
-        var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbzX5394ys2G27i2nbNCymFjm_1XhIHgvk-6uiqLMLx4n0MX-5dfB-Vcqe2KXqVGpxOa/exec';
+        var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbynSkj0vvVemn-IvuZJh8EsoWYNG0vPzabyg1L82kod5PyQL1l8-ESjWq1vhglKFMIw/exec';
         $.ajax({
             type: 'POST',
             url: googleAppsScriptUrl,
