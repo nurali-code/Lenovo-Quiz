@@ -1,8 +1,17 @@
 $(document).ready(function () {
-    $('[data-target-class]').on('change', function (e) {
-        const targetClass = $(this).attr('data-target-class');
-        $(`.${targetClass}`).val($(this).val());
+    $(document).on('change', '[data-target-class], select[name="u_type"]', function () {
+        const $this = $(this);
+        if ($this.is('[data-target-class]')) {
+            const targetClass = $this.attr('data-target-class');
+            $(`.${targetClass}`).val($this.val());
+        }
+        if ($this.is('select[name="u_type"]')) {
+            const selectedValue = $this.val();
+            const isOnlineSubscription = selectedValue === 'Online-подписка';
+            $('input[name="u_address"], input[name="u_time"]').prop('disabled', isOnlineSubscription);
+        }
     });
+
 
     $('fieldset').each(function () {
         $(this).find('input[type=radio]').each(function (index) {
@@ -26,11 +35,10 @@ $(document).ready(function () {
         const formCompany = $(this).find('input[name="u_company"]');
         const formCountry = $(this).find('select[name="u_country"]');
 
-        if (formCountry.val() !== 'Кыргызстан' && formCountry.val() !== 'Узбекистан') {
-            console.log($('select[name="u_type"]'));
+        if (formCountry.val() !== 'Казахстан' && formCountry.val() !== 'Узбекистан') {
             $('select[name="u_type"]').val('Online-подписка')
             $('select[name="u_type"], input[name="u_address"], input[name="u_time"]').prop('disabled', true);
-        } else { }
+        }
 
         nextTab(formParet); // delete
         $('body').addClass('white')
