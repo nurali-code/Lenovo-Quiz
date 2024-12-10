@@ -11,11 +11,13 @@ $type = isset($_POST['u_type']) ? $_POST['u_type'] : '';
 $address = isset($_POST['u_address']) ? $_POST['u_address'] : '';
 $time = isset($_POST['u_time']) ? $_POST['u_time'] : '';
 
-// Загрузка содержимого JSON-файла
+// Загрузка содержимого основного JSON-файла
 $jsonData = file_get_contents('data.json');
-
-// Преобразование JSON в массив
 $dataArray = json_decode($jsonData, true);
+
+// Загрузка содержимого файла с подарками
+$presentsData = file_get_contents('presents.json');
+$presentsArray = json_decode($presentsData, true);
 
 // Создание нового объекта с данными из формы
 $newData = [
@@ -34,11 +36,24 @@ $newData = [
 // Добавление новых данных в массив
 $dataArray[] = $newData;
 
-// Преобразование массива обратно в формат JSON
-$newJsonData = json_encode($dataArray, JSON_PRETTY_PRINT);
+// Обновление счетчиков в `presents.json`
+if ($type == "Online-подписка") {
+    $presentsArray[0]['online']+=1;
+} elseif ($type == "Offline") {
+    if ($country == 'Казахстан') {
+        $presentsArray[0]['kz']+=1;
+    } elseif ($country == 'Узбекистан') {
+        $presentsArray[0]['uz']+=1;
+    }
+}
 
-// Запись обновленных данных обратно в JSON-файл
+// Преобразование массивов обратно в JSON
+$newJsonData = json_encode($dataArray, JSON_PRETTY_PRINT);
+$newPresentsData = json_encode($presentsArray, JSON_PRETTY_PRINT);
+
+// Запись обновленных данных обратно в файлы
 file_put_contents('data.json', $newJsonData);
+file_put_contents('presents.json', $newPresentsData);
 
 // Отправка ответа клиенту
 echo "saved";

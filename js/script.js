@@ -12,6 +12,21 @@ $(document).ready(function () {
         }
     });
 
+    function endedQuiz(ter) {
+        $('.quiz-thanks').find('h3').text('Викторина окончена!');
+        $('.quiz-thanks').find('p').text('Спасибо за участие!');
+        $('.quiz-thanks').find('img').hide();
+        $('.quiz-tab').removeClass('active');
+        $('.quiz-thanks').addClass('active');
+        console.log(ter);
+    }
+
+    function onlyOnline() {
+        $('select[name="u_type"]').val('Online-подписка')
+        $('select[name="u_type"]').addClass('disabled')
+        $('input[name="u_address"], input[name="u_time"]').prop('disabled', true);
+    }
+
     $('fieldset').each(function () {
         $(this).find('input[type=radio]').each(function (index) {
             $(this).val(index + 1);
@@ -34,11 +49,10 @@ $(document).ready(function () {
         const formCompany = $(this).find('input[name="u_company"]');
         const formCountry = $(this).find('select[name="u_country"]');
 
-        if (formCountry.val() !== 'Казахстан' && formCountry.val() !== 'Узбекистан') {
-            $('select[name="u_type"]').val('Online-подписка')
-            $('select[name="u_type"]').addClass('disabled')
-            $('input[name="u_address"], input[name="u_time"]').prop('disabled', true);
-        }
+        if (formCountry.val() !== 'Казахстан' && formCountry.val() !== 'Узбекистан' && window.stat.online) { endedQuiz('online'); console.log('kz uz online'); }
+        else if (formCountry.val() == 'Казахстан' && window.stat.kz) { onlyOnline(); console.log('kz'); }
+        else if (formCountry.val() == 'Узбекистан' && window.stat.uz) { onlyOnline(); console.log('uz'); }
+
 
         $('body').addClass('white')
         var formData = $(this).serialize();
@@ -86,7 +100,6 @@ $(document).ready(function () {
     $('.quiz-finish').on('click', function (e) {
         $('body').removeClass('white')
         var percentage = Math.floor(($('.ok').length / Object.keys(answers).length) * 100);
-        var percentage = 100; // delete
         if (percentage < 90) {
             $('.quiz-resoult .quiz-form').hide()
             $('#resoult__heading').html('К сожалению вы набрали <span> всего ' + percentage + ' балов </span>')
@@ -125,7 +138,7 @@ $(document).ready(function () {
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
 
-        var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbynSkj0vvVemn-IvuZJh8EsoWYNG0vPzabyg1L82kod5PyQL1l8-ESjWq1vhglKFMIw/exec';
+        var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbyDpoY7YrW-9kjTzuGpA9qBk5GdqiFxjs2lsN5u7ceHFF5KZ11CKZU7JespEP2U_vRj/exec';
         $.ajax({
             type: 'POST',
             url: googleAppsScriptUrl,

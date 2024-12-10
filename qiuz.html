@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#E42828">
     <link rel="icon" type="image/png" href="./favicon.png">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=43">
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -23,14 +23,18 @@
 </head>
 
 <body>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPB2MQQ9" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <main class="quiz">
-        <div class="quiz-form quiz-tab active">
+
+        <div class="main-loader">
+            <img src="img/loader.gif" alt="i">
+        </div>
+
+        <div class="quiz-form quiz-tab">
             <picture>
                 <source media="(min-width: 700px)" srcset="img/logo_Lenovo-2.jpg">
                 <img src="img/logo_Lenovo.png" class="quiz__logo" alt="logo_Lenovo">
@@ -64,7 +68,7 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    1. На каком месте по надёжности среди архитектуры 
+                    1. На каком месте по надёжности среди архитектуры
                     x86 находятся серверы Lenovo согласно последнему
                     аналитическом отчёту ITIC?
                 </h3>
@@ -166,7 +170,7 @@
             <div class="quiz-content">
                 <h3 class="quiz__heading">
                     4. В каких городах расположены склады запчастей
-                    Lenovo ISG в регионе EECA? 
+                    Lenovo ISG в регионе EECA?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ </p>
                 <fieldset>
@@ -339,7 +343,7 @@
         <div class="quiz-tab">
             <div class="quiz-content">
                 <h3 class="quiz__heading">
-                    9. Можно ли в канале Lenovo купить лицензии Red Hat 
+                    9. Можно ли в канале Lenovo купить лицензии Red Hat
                     и Veeam с поддержкой от разработчика?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
@@ -524,7 +528,7 @@
                 <h3 class="quiz__heading">
                     14. Как называется программа индивидуальной
                     мотивации сотрудников партнера за продажи
-                    и обучение с выплатой живыми деньгами? 
+                    и обучение с выплатой живыми деньгами?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
@@ -592,7 +596,7 @@
             <div class="quiz-content">
                 <h3 class="quiz__heading">
                     16. Как называется система управления
-                    и мониторинга инфраструктуры от Lenovo? 
+                    и мониторинга инфраструктуры от Lenovo?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
@@ -626,7 +630,7 @@
             <div class="quiz-content">
                 <h3 class="quiz__heading">
                     17. В чём преимущество уровня гарантийной
-                    поддержки Premier? 
+                    поддержки Premier?
                 </h3>
                 <p class="quiz__caption">Выберите один ответ</p>
                 <fieldset>
@@ -828,7 +832,8 @@
     </footer>
 
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/checker.js?ver=43"></script>
+    <script src="./js/script.js?ver=43"></script>
 
 </body>
 
