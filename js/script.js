@@ -18,7 +18,6 @@ $(document).ready(function () {
         $('.quiz-thanks').find('img').hide();
         $('.quiz-tab').removeClass('active');
         $('.quiz-thanks').addClass('active');
-        console.log(ter);
     }
 
     function onlyOnline() {
@@ -53,8 +52,8 @@ $(document).ready(function () {
             onlyOnline();
             if (window.stat.online) { endedQuiz('online'); }
         }
-        else if (formCountry.val() == 'Казахстан' && window.stat.kz) { onlyOnline(); console.log('kz'); }
-        else if (formCountry.val() == 'Узбекистан' && window.stat.uz) { onlyOnline(); console.log('uz'); }
+        else if (formCountry.val() == 'Казахстан' && window.stat.kz) { onlyOnline(); }
+        else if (formCountry.val() == 'Узбекистан' && window.stat.uz) { onlyOnline(); }
         if (window.stat.online) { $('select[name="u_type"]').val('Offline').addClass('disabled') }
 
         $('body').addClass('white')
@@ -123,17 +122,7 @@ $(document).ready(function () {
 
     function nextTab(quizTab) {
         $('.quiz-tab').removeClass('active');
-        // quizTab.next('.quiz-tab').addClass('active');
-
-
-        // delete >>>>>>
-        if (quizTab.hasClass('quiz-form')) {
-            const specificTab = $('.quiz-tab').eq(20);
-            specificTab.addClass('active')
-        } else {
-            quizTab.next('.quiz-tab').addClass('active');
-        }
-        // <<<<<< delete 
+        quizTab.next('.quiz-tab').addClass('active');
     }
 
     $('.dropdown-btn').on('click', function (e) {
@@ -149,7 +138,6 @@ $(document).ready(function () {
             type: 'POST',
             url: 'save.php',
             data: formData,
-            success: function (response) { console.log(response); },
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
 
@@ -161,7 +149,6 @@ $(document).ready(function () {
             success: function (response) {
                 $(formParet).find('.btn').removeAttr('disabled');
                 nextTab(formParet);
-                console.log(response);
             },
             error: function (error) { console.error('Произошла ошибка:', error); }
         });
