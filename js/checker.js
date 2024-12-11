@@ -17,6 +17,7 @@ $(document).ready(function () {
         dataType: 'text',
         success: function (response) {
             response = response.trim();
+            console.log(response);
             if (response === "FINISHED.") { endedQuiz() }
             else if (response === "ALL") { activateQuiz() } else if (response.startsWith("Status:")) {
                 let statuses = response.replace("Status: ", "").split(". ");

@@ -24,7 +24,7 @@ $(document).ready(function () {
     function onlyOnline() {
         $('select[name="u_type"]').val('Online-подписка')
         $('select[name="u_type"]').addClass('disabled')
-        $('input[name="u_address"], input[name="u_time"]').prop('disabled', true);
+        $('input[name="u_address"], input[name="u_time"]').remove();
     }
 
     $('fieldset').each(function () {
@@ -49,10 +49,12 @@ $(document).ready(function () {
         const formCompany = $(this).find('input[name="u_company"]');
         const formCountry = $(this).find('select[name="u_country"]');
 
-        if (formCountry.val() !== 'Казахстан' && formCountry.val() !== 'Узбекистан' && window.stat.online) { endedQuiz('online'); console.log('kz uz online'); }
+        if (formCountry.val() !== 'Казахстан' && formCountry.val() !== 'Узбекистан') {
+            onlyOnline();
+            if (window.stat.online) { endedQuiz('online'); }
+        }
         else if (formCountry.val() == 'Казахстан' && window.stat.kz) { onlyOnline(); console.log('kz'); }
         else if (formCountry.val() == 'Узбекистан' && window.stat.uz) { onlyOnline(); console.log('uz'); }
-
 
         $('body').addClass('white')
         var formData = $(this).serialize();
@@ -90,16 +92,18 @@ $(document).ready(function () {
             $(allRadios).attr('disabled', 'disabled')
             $(this).attr('disabled', 'disabled')
             setTimeout(() => {
-                nextTab($(this).parents('.quiz-tab'));
                 $('html, body').animate({ scrollTop: 0 }, 300,)
+                nextTab($(this).parents('.quiz-tab'));
+                if ($(this).hasClass('quiz-finish')) { quizFinish() }
             }, Math.floor(Math.random() * (1500 - 600 + 1)) + 600);
         } else { alert('Пожалуйста, выберите хотя бы один вариант ответа.'); }
 
     });
 
-    $('.quiz-finish').on('click', function (e) {
+    function quizFinish() {
         $('body').removeClass('white')
         var percentage = Math.floor(($('.ok').length / Object.keys(answers).length) * 100);
+        percentage += 100;
         if (percentage < 90) {
             $('.quiz-resoult .quiz-form').hide()
             $('#resoult__heading').html('К сожалению вы набрали <span> всего ' + percentage + ' балов </span>')
@@ -113,12 +117,22 @@ $(document).ready(function () {
         if (percentage < 30) { $('.quiz-range__item').css('background-color', 'red') }
         else if (percentage < 95) { $('.quiz-range__item').css('background-color', '#ffcd29b3') }
         else { $('.quiz-range__item').css('background-color', '#6fbe47') }
-        setTimeout(() => { $('.quiz-range__item').css('width', percentage + '%'); }, 1500);
-    });
+        setTimeout(() => { $('.quiz-range__item').css('width', percentage + '%'); }, 500);
+    }
 
     function nextTab(quizTab) {
-        quizTab.removeClass('active');
-        quizTab.next('.quiz-tab').addClass('active');
+        $('.quiz-tab').removeClass('active');
+        // quizTab.next('.quiz-tab').addClass('active');
+
+
+        // delete >>>>>>
+        if (quizTab.hasClass('quiz-form')) {
+            const specificTab = $('.quiz-tab').eq(20);
+            specificTab.addClass('active')
+        } else {
+            quizTab.next('.quiz-tab').addClass('active');
+        }
+        // <<<<<< delete 
     }
 
     $('.dropdown-btn').on('click', function (e) {
