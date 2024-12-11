@@ -55,6 +55,7 @@ $(document).ready(function () {
         }
         else if (formCountry.val() == 'Казахстан' && window.stat.kz) { onlyOnline(); console.log('kz'); }
         else if (formCountry.val() == 'Узбекистан' && window.stat.uz) { onlyOnline(); console.log('uz'); }
+        if (window.stat.online) { $('select[name="u_type"]').val('Offline').addClass('disabled') }
 
         $('body').addClass('white')
         var formData = $(this).serialize();

@@ -14,15 +14,15 @@ if ($dataArray !== null) {
     $online = false;
 
     foreach ($dataArray as $item) {
-        if ($item['kz'] == $item['kz-tot']) {
+        if ($item['kz'] >= $item['kz-tot']) {
             $kz = true;
         }
 
-        if ($item['uz'] == $item['uz-tot']) {
+        if ($item['uz'] >= $item['uz-tot']) {
             $uz = true;
         }
 
-        if ($item['online'] == $item['online-tot']) {
+        if ($item['online'] >= $item['online-tot']) {
             $online = true;
         }
 
